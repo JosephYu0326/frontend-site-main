@@ -8,8 +8,8 @@ function Header(){
         <h1>React Site Demo</h1>
         <nav>      
           <Link to ="/">Home</Link> | 
-          <Link to ="/about">About</Link> | 
-          <Link to ="/contact">Contact</Link> | 
+          <Link to ="/about">展覽列表</Link> | 
+          {/* <Link to ="/contact">Contact</Link> |  */}
           <Link to ="/categories">產品分類</Link> | 
           <Link to ="/register">註冊</Link> | 
         </nav>
