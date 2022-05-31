@@ -9,19 +9,14 @@ function Contact(){
   }
   console.log(selectedFile)
   console.log(fileName)
-  const handleSubmit=(e)=>{
-    
-    sendData()
-  }
-  const sendData = async()=>{
-
-    const formData = new FormData()
-    formData.append('file',selectedFile)
-    formData.append('fileName',fileName)
-    console.log( formData.append('File',selectedFile))
-    const response = await fetch (`${process.env.REACT_APP_API_URL}/uploadImage`,{method:"POST",body:formData})
-    const results = await response.json()
-    console.log(results)
+  const handleSubmit=async(e)=>{
+   const formData = new FormData()
+   formData.append('file',selectedFile)
+   formData.append('fileName',fileName)
+   console.log( formData.append('File',selectedFile))
+   const response = await fetch (`${process.env.REACT_APP_API_URL}/uploadImage`,{method:"POST",body:formData})
+   const results = await response.json()
+   console.log(results)
   }
 
     return(
